@@ -4,12 +4,13 @@
   "license": "https://themeforest.net/licenses/terms/regular",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "build:demo": "ng build --prod --base-href \"http://demos.ui-lib.com/blumingo/\"",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "core-js": "2.5.4",
     "date-fns": "1.29.0",
     "echarts": "4.2.0-rc.1",
+    "express": "^4.17.1",
     "feather-icons": "4.7.3",
     "jquery": "^3.3.1",
     "lodash.clonedeep": "^4.5.0",
@@ -72,5 +74,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
+  },
+  "engines": {
+    "node": "~12.15.0",
+    "npm": "~6.13.4"
   }
 }

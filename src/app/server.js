@@ -1,14 +1,12 @@
-const express = require('express');
-const path = require('path');
+app.listen(process.env.PORT || 3000);
+
+import express from "express";
 const app = express();
 
-// Serve static files....
-app.use(express.static(__dirname + '/dist/gull'));
+app.use(static(__dirname + '/dist'));
 
-// Send all requests to index.html
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/gull/index.html'));
+app.all('*', (req, res) => {
+  res.status(200).sendFile(__dirname + '/dist/index.html');
 });
 
-// default Heroku PORT
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 8080);

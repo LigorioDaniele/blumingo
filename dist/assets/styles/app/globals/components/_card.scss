@@ -1,6 +1,7 @@
 .card {
-    border-radius: 0px;
+    border-radius: 15px;
     border: 1px solid #ced4da;
+    border: none;
     &.border-top {
         box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1),
             0 1px 2px 0 rgba(0, 0, 0, 0.1), inset 0 2px 0 0 var(--green);

@@ -4,6 +4,9 @@
 .font-family-2 {
   font-family: "Archivo", sans-serif !important;
 }
+.font-family-3 {
+  font-family: "Poppins", sans-serif !important;
+}
 
 @for $i from 10 through 78 {
   .text-#{$i} {
